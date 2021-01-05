@@ -13,7 +13,7 @@ Swagger(app)
 
 @app.route("/")
 def home():
-    return "Welcome to the app for dialogue identification"
+    return "<h1>Welcome</h1>  <p> Using this api you can perform an author identification task. <br><br> You can input a dialogue of your choice and the api will let you know if the dialogue is more likely to be uttered by Captain America or Iron Man <br> <br> A naive bayes classifier was built on the transcript of Captain America: The first avenger and Iron Man and conditional probabilities of different words were obtained for these two characters. The <u>predict_dialogue</u> endpoint let's you try this out, so go ahead and try it out!</p>"
 
 @app.route("/predict_dialogue", methods = ["POST"])
 def predict_dialogue():
